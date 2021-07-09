@@ -1,0 +1,25 @@
+/* About starts */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 870px) {
+  .about-content {
+    display: grid;
+    grid-gap: 2rem;
+  }
+}
+.about-details {
+  flex-basis: 45%;
+}
+.about-details p {
+  color: var(--text-color2);
+}
+.about-img {
+  flex-basis: 50%;
+}
+.about-img img {
+  width: 100%;
+}
+/* About ends */

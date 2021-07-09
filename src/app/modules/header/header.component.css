@@ -1,0 +1,212 @@
+/* Header starts */
+.header {
+  width: 100%;
+  height: 100vh; /* Change to 90vh if I decide to use Register form*/
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  position: relative;
+}
+@media only screen and (max-height: 450px) {
+  .header {
+    height: 600px;
+  }
+}
+/* Nav starts */
+.header nav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding: 15px 0;
+  background-color: var(--white-color);
+  box-shadow: 0 1px 4px #85ffbd;
+  /* box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15); */
+}
+.header nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav .nav-list-area {
+  display: flex;
+  align-items: center;
+}
+
+.header nav .nav-list li {
+  display: inline-block;
+  margin: 0 20px;
+  font-weight: 600;
+  position: relative;
+}
+.header nav .nav-list li a::after,
+.header nav .nav-list li .active-link::after {
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  background-color: var(--primary-color);
+  opacity: 0;
+  transition: 0.2s all ease-in;
+}
+.header nav .nav-list li .active-link::after {
+  opacity: 1 !important;
+}
+.header nav .nav-list li a:hover::after {
+  opacity: 1;
+}
+.header nav .nav-list-area .btn {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.header nav .toggle-menu {
+  cursor: pointer;
+  margin-top: -6px;
+  display: none;
+}
+.header nav .toggle-menu .menu-bar {
+  width: 2rem;
+  height: 2px;
+  background-color: var(--text-color);
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.5s;
+}
+.header nav .toggle-menu .menu-bar::before,
+.header nav .toggle-menu .menu-bar::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  background-color: inherit;
+  transition: all 0.5s;
+}
+.header nav .toggle-menu .menu-bar::before {
+  width: inherit;
+  top: -0.6rem;
+}
+.header nav .toggle-menu .menu-bar::after {
+  width: 1rem;
+  top: 0.6rem;
+}
+.open-menu .menu-bar {
+  background-color: transparent !important;
+}
+.open-menu .menu-bar::before {
+  top: 0 !important;
+  transform: rotate(135deg);
+  background-color: var(--text-color) !important;
+}
+.open-menu .menu-bar::after {
+  top: 0 !important;
+  transform: rotate(-135deg);
+  background-color: var(--text-color) !important;
+  width: inherit !important;
+}
+/* Media query */
+@media screen and (max-width: 870px) {
+  .header nav .nav-list {
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--text-color);
+    transition: 0.5s;
+  }
+  .header nav .nav-list.open-menu {
+    left: 0;
+  }
+  .header nav .nav-list-area .btn {
+    margin: 0 1rem 0 0;
+  }
+  .header nav .toggle-menu {
+    display: block;
+  }
+  .header nav .nav-list li {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .header nav .nav-list li a {
+    color: var(--white-color) !important;
+  }
+}
+/* Nav ends */
+
+/* Hero starts */
+.hero {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (min-width: 870px) {
+  .hero-details {
+    flex-basis: 45%;
+  }
+}
+.hero-details h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.hero-details p {
+  margin: 0.5rem 0 2rem 0;
+  color: var(--text-color2);
+}
+@media only screen and (max-width: 768px) {
+  .hero-details h1 {
+    font-size: 2.5rem;
+  }
+}
+.hero-details h1 span {
+  color: var(--primary-color);
+}
+.hero-details .btn {
+  padding: 0.75rem 2.5rem;
+  font-weight: 600;
+}
+@media only screen and (max-width: 870px) {
+  .hero-img {
+    display: none;
+  }
+}
+.hero-img img {
+  max-width: 100%;
+  display: block;
+}
+/* Hero ends */
+
+/* Register Area */
+.register-area {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f2f5f6a4;
+  display: flex;
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease-in-out;
+  overflow-y: scroll;
+}
+.register-area.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+.register {
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: auto;
+  width: 30%;
+  box-shadow: var(--box-shadow);
+}
+@media only screen and (max-width: 870px) {
+  .register {
+    width: 90%;
+  }
+}

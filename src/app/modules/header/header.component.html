@@ -1,0 +1,61 @@
+<!-- Header -->
+<header class="header" id="header">
+  <!-- Nav -->
+  <nav>
+    <div class="container">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <h1>Logo</h1>
+      </a>
+      <!-- Nav link -->
+      <div class="nav-list-area">
+        <ul class="nav-list" [class.open-menu]="hamClick">
+          <li><a href="#home" class="nav-link active-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#why-us" class="nav-link">Why us</a></li>
+          <li><a href="#testi" class="nav-link">Testimonial</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <!-- Register btn -->
+        <button
+          class="btn prim-btn register-btn"
+          (click)="openAuthModal()"
+          #auth
+        >
+          Register
+        </button>
+        <!-- Hamburger menu -->
+        <div
+          class="toggle-menu"
+          id="toggle-menu"
+          (click)="openMenu()"
+          [class.open-menu]="hamClick"
+        >
+          <span class="menu-bar"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero -->
+  <div class="hero container" id="home">
+    <div class="hero-details">
+      <h1 class="hero-title">Welcome to Super Trade Investment</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae tempora
+        reprehenderit minus numquam.
+      </p>
+      <a href="#contact" class="btn prim-btn">Invest now</a>
+    </div>
+    <div class="hero-img">
+      <img
+        src="https://res.cloudinary.com/djnqxvljr/image/upload/v1617195899/afrinc_gx7zgq.png"
+        alt="image"
+      />
+    </div>
+    <div class="register-area" [class.show-modal]="authModal">
+      <div class="register" #accountMenu>
+        <app-signup></app-signup>
+      </div>
+    </div>
+  </div>
+</header>

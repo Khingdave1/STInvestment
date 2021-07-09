@@ -1,0 +1,19 @@
+/* Footer starts */
+footer {
+  background-color: var(--text-color2);
+  color: var(--white-color);
+  padding: 3rem 0;
+}
+footer .container {
+  display: grid;
+  grid-gap: 1rem;
+  text-align: center;
+}
+@media only screen and (min-width: 480px) {
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/* Footer ends */

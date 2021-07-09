@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+/* Variables starts */
+:root {
+  --primary-color: #2c724f;
+  --text-color: #212121;
+  --text-color2: #666666;
+  --light-green: #f2f5f6;
+  --white-color: #ffffff;
+  --light-grey: #ebebeb;
+  --box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+}
+/* Variables ends */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  color: var(--text-color);
+}
+
+/* General starts */
+a {
+  color: var(--text-color);
+}
+button {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+input,
+button,
+textarea {
+  font-family: "Montserrat", sans-serif;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+.btn {
+  display: inline-block;
+  border-radius: 0.2rem;
+  transition: all 250ms ease-in;
+}
+.prim-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid transparent;
+}
+.prim-btn:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.sec-btn {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.sec-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid transparent;
+}
+.container {
+  padding: 0 5%;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+}
+.sect {
+  padding: 5rem 0;
+}
+@media only screen and (max-width: 870px) {
+  .sect {
+    padding: 3rem 0;
+  }
+}
+.sect-heading h2 {
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 30px;
+  font-weight: 500;
+}
+.sect-heading h2::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: -0.5rem;
+  background-color: var(--primary-color);
+}
+
+.clickable {
+  cursor: pointer;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+/* General ends */

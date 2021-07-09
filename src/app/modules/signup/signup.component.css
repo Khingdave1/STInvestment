@@ -1,0 +1,19 @@
+h5 {
+  margin-bottom: 1.5rem;
+}
+form {
+  display: grid;
+  grid-gap: 1rem;
+}
+form input {
+  width: 100%;
+  font-size: 18px;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--light-grey);
+  outline: none;
+}
+form .form-btn .btn {
+  padding: 0.5rem 1rem;
+}
