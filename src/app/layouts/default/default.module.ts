@@ -9,6 +9,7 @@ import { ContactComponent } from 'src/app/modules/contact/contact.component';
 import { BtcchartComponent } from 'src/app/modules/btcchart/btcchart.component';
 import { FooterComponent } from 'src/app/modules/footer/footer.component';
 import { SignupComponent } from 'src/app/modules/signup/signup.component';
+import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
 
 
 
@@ -21,7 +22,8 @@ import { SignupComponent } from 'src/app/modules/signup/signup.component';
     ContactComponent,
     BtcchartComponent,
     FooterComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { SignupComponent } from 'src/app/modules/signup/signup.component';
     ContactComponent,
     BtcchartComponent,
     FooterComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent
   ]
 })
 export class DefaultModule { }
