@@ -11,7 +11,7 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('auth') auth: ElementRef;
 
   hamClick: any;
-  authModal: any
+  authModal: any;
 
   constructor(private renderer: Renderer2) { }
 

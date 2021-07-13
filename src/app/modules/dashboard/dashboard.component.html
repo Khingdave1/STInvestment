@@ -1,19 +1,24 @@
 <div class="container-dash">
   <!-- Side Nav -->
-  <aside class="sidenav">
-    <a href="#">Logo</a>
-    <nav>
-      <ul>
-        <li class="active clickable">Dashboard</li>
-        <li class="clickable">Account</li>
-        <li class="clickable">Setting</li>
-      </ul>
-    </nav>
+  <aside class="sidenav-area" [class.show-menu]="hamClick">
+    <div class="sidenav" #sideNav>
+      <a href="#">Logo</a>
+      <nav>
+        <ul>
+          <li class="active clickable">Dashboard</li>
+          <li class="clickable">Account</li>
+          <li class="clickable">Setting</li>
+        </ul>
+      </nav>
+    </div>
   </aside>
   <!-- Main -->
   <main>
     <div class="main-header">
-      <span class="profile">
+      <span class="main-header-menu" (click)="openMenu()" #menuBtn>
+        <i class="bx bx-menu-alt-left menu-icon clickable"></i>
+      </span>
+      <span class="main-header-profile">
         <p>Welcome! <strong id="profile-name">David</strong></p>
         <img src="../../../assets/img/pix.png" alt="image" id="profile-image" />
       </span>

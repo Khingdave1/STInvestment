@@ -6,29 +6,32 @@
 }
 
 /* Side Nav starts */
-.sidenav {
+.sidenav-area {
   width: 20%;
   height: 100vh;
   position: fixed;
   left: 0;
+}
+.sidenav {
+  height: 100%;
   padding: 1.5rem;
   background-color: var(--light-green);
 }
-.sidenav nav {
+.sidenav-area nav {
   margin-top: 5rem;
 }
-.sidenav nav ul {
+.sidenav-area nav ul {
   display: grid;
   grid-gap: 1.5rem;
 }
-.sidenav nav ul li {
+.sidenav-area nav ul li {
   font-size: 1.2rem;
   position: relative;
   cursor: pointer;
   transform: translateX(0);
   transition: transform 300ms ease-in-out;
 }
-.sidenav nav ul li.active::after {
+.sidenav-area nav ul li.active::after {
   content: "";
   width: 3px;
   height: 100%;
@@ -36,7 +39,7 @@
   left: -0.5rem;
   background-color: var(--primary-color);
 }
-.sidenav nav ul li:hover {
+.sidenav-area nav ul li:hover {
   transform: translateX(5px);
 }
 /* Side Nav ends */
@@ -50,8 +53,17 @@ main {
 }
 main .main-header {
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-main .main-header .profile {
+main .main-header .main-header-menu {
+  visibility: hidden;
+}
+main .main-header .menu-icon {
+  font-size: 30px;
+}
+main .main-header .main-header-profile {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -72,23 +84,33 @@ main .main-body .card {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: var(--box-shadow);
-  /* width: 220px; */
-  margin-bottom: 2rem;
 }
 /* Main ends */
 
 /* Media Queries */
 @media only screen and (max-width: 755px) {
-  .sidenav {
+  .sidenav-area {
     position: fixed;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    background-color: #ebebeb79;
+    transition: 0.5s;
     z-index: 100;
-    width: fit-content;
-    display: none;
+  }
+  .sidenav-area.show-menu {
+    left: 0;
+  }
+  .sidenav {
+    width: 40%;
   }
   main {
     position: relative;
     left: 0;
     width: 100%;
+  }
+  main .main-header .main-header-menu {
+    visibility: visible;
   }
 }
 @media only screen and (min-width: 480px) {
