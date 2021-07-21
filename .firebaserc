@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "supertradeinvestment-eed51": {
+      "hosting": {
+        "stinvestment": [
+          "supertradeinvestment-eed51"
+        ]
+      }
+    }
+  }
+}
