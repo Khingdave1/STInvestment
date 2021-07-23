@@ -1,4 +1,5 @@
 import { Component, OnInit, Renderer2, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { ProfileService } from 'src/app/services/profile.service';
 
@@ -13,7 +14,7 @@ export class DashboardComponent implements AfterViewInit {
 
   hamClick: any;
 
-  constructor(private firebaseService: FirebaseService, private profileService: ProfileService, private renderer: Renderer2) { }
+  constructor(private firebaseService: FirebaseService, private profileService: ProfileService, private renderer: Renderer2, private router: Router) { }
 
   ngAfterViewInit(): void {
     // Click Outside to close element
@@ -34,8 +35,8 @@ export class DashboardComponent implements AfterViewInit {
   // Log the user out
   logOut() {
     this.firebaseService.signout()
-
-    window.location.reload()
+    // Return to Home page
+    this.router.navigate([''])
   }
 
 }

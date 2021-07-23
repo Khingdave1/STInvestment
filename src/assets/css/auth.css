@@ -1,0 +1,31 @@
+h5 {
+  margin-bottom: 1.5rem;
+}
+form {
+  display: grid;
+  grid-gap: 1rem;
+}
+form input {
+  width: 100%;
+  font-size: 18px;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--light-grey);
+  outline: none;
+}
+form .form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+form .form-btn .btn {
+  padding: 0.5rem 1rem;
+}
+form .form-btn .form-extra {
+  font-size: 14px;
+}
+form .form-btn .form-extra:hover strong {
+  color: var(--primary-color);
+}

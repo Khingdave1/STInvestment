@@ -8,9 +8,9 @@ import { TestimonialComponent } from 'src/app/modules/testimonial/testimonial.co
 import { ContactComponent } from 'src/app/modules/contact/contact.component';
 import { BtcchartComponent } from 'src/app/modules/btcchart/btcchart.component';
 import { FooterComponent } from 'src/app/modules/footer/footer.component';
-import { SignupComponent } from 'src/app/modules/signup/signup.component';
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderModule } from 'src/app/modules/header/header.module';
 
 
 
@@ -23,14 +23,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     BtcchartComponent,
     FooterComponent,
-    SignupComponent,
     DashboardComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HeaderModule
   ],
   exports: [
     RouterModule,
@@ -41,7 +41,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     BtcchartComponent,
     FooterComponent,
-    SignupComponent,
     DashboardComponent
   ]
 })

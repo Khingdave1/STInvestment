@@ -44,9 +44,10 @@ export class FirebaseService {
       .then(res => {
         let data = {
           emailAddress: payload.emailAddress,
-          gender: payload.gender,
+          fullName: payload.fullName,
+          userName: payload.userName,
+          telNumber: payload.telNumber,
           imageUrl: this.imageUrl,
-          name: payload.name,
           uid: res.user?.uid
         }
 

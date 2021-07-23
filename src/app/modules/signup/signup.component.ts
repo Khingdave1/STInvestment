@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { FirebaseService } from 'src/app/services/firebase.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+
+  @Output("parentData") parentData: EventEmitter<any> = new EventEmitter();
 
   isSignedin: boolean = false;
 
@@ -37,7 +39,6 @@ export class SignupComponent implements OnInit {
       return
     }
 
-
     let payload = {
       emailAddress: this.signupForm.value.email,
       fullName: this.signupForm.value.fullName,
@@ -46,13 +47,18 @@ export class SignupComponent implements OnInit {
       password: this.signupForm.value.password
     }
 
-
     await this.firebaseService.createUser(payload.emailAddress, payload.password, payload)
 
     if (this.firebaseService.isLogggedIn === true) {
       this.isSignedin = true
+      // Navigate to Dashboard
       this.router.navigate(['dashboard'])
     }
+  }
+
+  // Show Signin Form
+  openSigninModal() {
+    this.parentData.emit();
   }
 
 }

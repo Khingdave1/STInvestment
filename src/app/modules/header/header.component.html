@@ -52,10 +52,18 @@
         alt="image"
       />
     </div>
-    <div class="register-area" [class.show-modal]="authModal">
-      <div class="register" #accountMenu>
-        <app-signup></app-signup>
-      </div>
-    </div>
   </div>
 </header>
+
+<!-- Authentication -->
+<div class="register-area" [class.show-modal]="authModal">
+  <div class="register" #accountMenu>
+    <app-authentication></app-authentication>
+  </div>
+</div>
+
+<!-- <div class="auth-container" [ngClass]="{ 'show-modal': authModal }">
+  <div class="app-auth" #auth>
+    <app-authentication></app-authentication>
+  </div>
+</div> -->
