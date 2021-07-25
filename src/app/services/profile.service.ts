@@ -15,7 +15,7 @@ export class ProfileService {
   // CREATE
   addUser(payload: any) {
     return new Promise<any>((resolve, reject) => {
-      this.collectionPath.add(payload).then(res => resolve(console.log(res)), err => reject(err))
+      this.collectionPath.add(payload).then(res => resolve(res), err => reject(err))
     })
   }
 

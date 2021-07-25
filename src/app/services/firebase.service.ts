@@ -43,7 +43,7 @@ export class FirebaseService {
     await this.firebaseAuth.createUserWithEmailAndPassword(email, password)
       .then(res => {
         let data = {
-          emailAddress: payload.emailAddress,
+          emailAddress: payload.emailAddress.toLowerCase(),
           fullName: payload.fullName,
           userName: payload.userName,
           telNumber: payload.telNumber,

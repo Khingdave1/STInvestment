@@ -13,6 +13,11 @@ export class SignupComponent implements OnInit {
   @Output("parentData") parentData: EventEmitter<any> = new EventEmitter();
 
   isSignedin: boolean = false;
+  emailAddress: string = "";
+  fullName: string = "";
+  userName: string = "";
+  telNumber: number;
+  imageUrl: string = "";
 
   constructor(private firebaseService: FirebaseService, private formBuilder: FormBuilder, private router: Router) { }
 
