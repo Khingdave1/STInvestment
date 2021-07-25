@@ -8,7 +8,6 @@ import { TestimonialComponent } from 'src/app/modules/testimonial/testimonial.co
 import { ContactComponent } from 'src/app/modules/contact/contact.component';
 import { BtcchartComponent } from 'src/app/modules/btcchart/btcchart.component';
 import { FooterComponent } from 'src/app/modules/footer/footer.component';
-import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderModule } from 'src/app/modules/header/header.module';
 
@@ -22,8 +21,7 @@ import { HeaderModule } from 'src/app/modules/header/header.module';
     TestimonialComponent,
     ContactComponent,
     BtcchartComponent,
-    FooterComponent,
-    DashboardComponent
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -40,8 +38,7 @@ import { HeaderModule } from 'src/app/modules/header/header.module';
     TestimonialComponent,
     ContactComponent,
     BtcchartComponent,
-    FooterComponent,
-    DashboardComponent
+    FooterComponent
   ]
 })
 export class DefaultModule { }

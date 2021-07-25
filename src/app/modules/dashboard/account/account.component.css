@@ -1,0 +1,135 @@
+/*/---- Main start ----/*/
+input:hover {
+  border: 1px solid var(--text-color) !important;
+}
+
+.main-sect-heading-left {
+  border-bottom: 1px solid var(--light-grey);
+  padding: 1.5rem;
+}
+
+.account-banner {
+  padding-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.account-banner-bg .cover-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../../assets/img/bg-2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  width: 100%;
+}
+.account-banner-bg .cover-image h2 {
+  font-size: 28px;
+  color: var(--white-color);
+  padding: 5rem 0 0 3rem;
+}
+
+.account-banner-info {
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+@media only screen and (min-width: 585px) {
+  .account-banner-info {
+    display: flex;
+    align-items: center;
+  }
+}
+.account-banner-info-image {
+  max-width: 100px;
+  margin-top: -40px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.account-banner-info-image .profile-image {
+  width: 100%;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 585px) {
+  .account-banner-info-details {
+    display: flex;
+    align-items: center;
+  }
+}
+.account-banner-info-details h4 {
+  font-size: 1.34rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.account-banner-info-details p {
+  font-size: 1rem;
+}
+.account-banner-info-details .profile-name {
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 585px) {
+  .account-banner-info-details .profile-name {
+    margin-bottom: 1rem;
+  }
+}
+.account-banner-info-details .profile-name h4 {
+  color: var(--primary-color);
+}
+.account-banner-info-details .profile-email h4 {
+  color: var(--text-color2);
+}
+
+.account-profile {
+  padding: 0;
+}
+.account-profile-details {
+  padding: 0 1.5rem;
+}
+.account-profile-details h5 {
+  font-size: 16px !important;
+}
+.account-profile-details .account-info {
+  padding: 1.5rem 0;
+}
+.account-profile-details .account-info form {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 1rem 1.5rem 0 1.5rem;
+}
+.account-profile-details .account-info input {
+  width: 100%;
+  border: 1px solid var(--light-grey);
+  border-radius: var(--border-radius);
+  padding: 0.8rem;
+  transition: all 0.2s;
+  outline: none;
+  margin-top: 1rem;
+  transition: all 0.2s ease-in;
+}
+
+.account-profile-details .account-info input::placeholder {
+  color: var(--text-color);
+}
+
+.account-profile-details .user-info {
+  border-bottom: 1px solid var(--light-grey);
+}
+@media only screen and (min-width: 585px) {
+  .account-profile-details .user-info form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 585px) {
+  .account-profile-details .contact-info form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .account-profile-details .contact-info form .address {
+    grid-column: 1 / span 3;
+  }
+}
+.account-profile-details .update-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.account-profile-details .update-btn .btn {
+  padding: 0.5rem;
+}
+
+/*/---- Main ends ----/*/

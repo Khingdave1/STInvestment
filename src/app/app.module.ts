@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardModule } from './layouts/dashboard/dashboard.module';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DefaultModule } from './layouts/default/default.module';
 
@@ -17,6 +18,7 @@ import { DefaultModule } from './layouts/default/default.module';
     BrowserModule,
     AppRoutingModule,
     DefaultModule,
+    DashboardModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],

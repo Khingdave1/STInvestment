@@ -1,14 +1,3 @@
-.gc {
-  color: #00d285;
-}
-
-@media only screen and (min-width: 755px) {
-  .container-dash {
-    display: flex;
-    width: 100%;
-  }
-}
-
 /* Side Nav starts */
 .sidenav-area {
   width: 20%;
@@ -87,19 +76,19 @@ main .main-header .main-header-profile {
 main .main-header #profile-name {
   margin-right: 1rem;
 }
-main .main-header #profile-image {
+.main-header #profile-image {
   width: 40px;
   height: 40px;
 }
-main .main-body {
+.main-body {
   display: grid;
   grid-gap: 2.5rem;
 }
-main .main-body .card-list {
+.main-body .card-list {
   display: grid;
   grid-gap: 2rem;
 }
-main .main-body .card {
+.main-body .card {
   background-color: #fff;
   border-radius: 8px;
   padding: 1.5rem;
@@ -134,7 +123,7 @@ main .main-body .card {
   }
 }
 @media only screen and (min-width: 480px) {
-  main .main-body .card-list {
+  .main-body .card-list {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }

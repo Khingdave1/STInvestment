@@ -1,0 +1,25 @@
+<div class="container-dash">
+  <!-- Side Nav -->
+  <aside class="sidenav-area" [class.show-menu]="hamClick">
+    <div class="sidenav" #sideNav>
+      <app-sidenav></app-sidenav>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main>
+    <div class="main-header">
+      <span class="main-header-menu" (click)="openMenu()" #menuBtn>
+        <i class="bx bx-menu-alt-left menu-icon clickable"></i>
+      </span>
+      <span class="main-header-profile">
+        <p>Welcome! <strong id="profile-name">David</strong></p>
+        <img src="../../../assets/img/pix.png" alt="image" id="profile-image" />
+      </span>
+    </div>
+    <div class="main-body">
+      <!-- <app-overview></app-overview> -->
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

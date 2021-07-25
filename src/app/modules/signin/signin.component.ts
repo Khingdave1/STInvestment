@@ -42,6 +42,7 @@ export class SigninComponent implements OnInit {
     if (this.signinForm.invalid) {
       return
     }
+    this.loading = true // Move back to (look down)
 
     let payload = {
       emailAddress: this.signinForm.value.email,
@@ -50,7 +51,7 @@ export class SigninComponent implements OnInit {
 
     await this.firebaseService.signinUser(payload)
       .then(res => {
-        this.loading = true
+        // Here
       })
 
     if (this.firebaseService.isLogggedIn === true) {

@@ -1,0 +1,22 @@
+<!-- Side Nav -->
+
+<a routerLink="/" class="logo">Logo</a>
+<nav>
+  <ul class="sidenav-list">
+    <li
+      class="active clickable"
+      routerLink="/dashboard"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Dashboard
+    </li>
+    <li class="clickable" routerLink="account" routerLinkActive="active">
+      Account
+    </li>
+    <li class="clickable" routerLinkActive="active">Setting</li>
+  </ul>
+</nav>
+<span class="logout clickable" (click)="logOut()"
+  >Log out <i class="bx bx-log-out"></i
+></span>

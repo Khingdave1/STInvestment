@@ -1,0 +1,38 @@
+/* Side Nav starts */
+nav {
+  margin-top: 5rem;
+}
+nav ul {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+nav ul li {
+  font-size: 1.2rem;
+  position: relative;
+  cursor: pointer;
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+nav ul li.active::after {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: -0.5rem;
+  background-color: var(--primary-color);
+}
+nav ul li:hover {
+  transform: translateX(5px);
+}
+.logout {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+}
+.logout i {
+  vertical-align: middle;
+}
+.logout:hover {
+  color: var(--primary-color);
+}
+/* Side Nav ends */
