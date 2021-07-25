@@ -18,6 +18,8 @@ export class SignupComponent implements OnInit {
   userName: string = "";
   telNumber: number;
   imageUrl: string = "";
+  loading: boolean = false;
+  errorMessage: string = "";
 
   constructor(private firebaseService: FirebaseService, private formBuilder: FormBuilder, private router: Router) { }
 
@@ -40,9 +42,13 @@ export class SignupComponent implements OnInit {
   })
 
   async signup() {
+    // If form is invalid don't submit
     if (this.signupForm.invalid) {
       return
     }
+
+    // Loading
+    this.loading = true
 
     let payload = {
       emailAddress: this.signupForm.value.email,
@@ -53,6 +59,12 @@ export class SignupComponent implements OnInit {
     }
 
     await this.firebaseService.createUser(payload.emailAddress, payload.password, payload)
+      .then(res => {
+
+      }).catch(err => {
+        this.errorMessage = err
+        this.loading = false
+      })
 
     if (this.firebaseService.isLogggedIn === true) {
       this.isSignedin = true

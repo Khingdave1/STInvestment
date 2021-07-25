@@ -2,6 +2,7 @@
 <form (ngSubmit)="signin()" [formGroup]="signinForm">
   <input type="email" placeholder="Email" formControlName="email" />
   <input type="password" placeholder="Password" formControlName="password" />
+  <span class="rc">{{ errorMessage }}</span>
   <div class="form-btn">
     <button class="btn prim-btn clickable" (click)="signin()">
       <span *ngIf="loading">Loading...</span>

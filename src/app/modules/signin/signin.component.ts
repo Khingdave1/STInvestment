@@ -16,9 +16,7 @@ export class SigninComponent implements OnInit {
   returnUrl = '';
   error = '';
   isSignedin: boolean = false;
-  // message = '';
-  // email: string = '';
-  // password: string = '';
+  errorMessage: string = "";
 
   constructor(private firebaseService: FirebaseService, private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router) { }
 
@@ -39,10 +37,12 @@ export class SigninComponent implements OnInit {
   })
 
   async signin() {
+    // If form is invalid don't submit
     if (this.signinForm.invalid) {
-      return
+      // return
     }
-    this.loading = true // Move back to (look down)
+    // Loading
+    this.loading = true
 
     let payload = {
       emailAddress: this.signinForm.value.email,
@@ -51,7 +51,10 @@ export class SigninComponent implements OnInit {
 
     await this.firebaseService.signinUser(payload)
       .then(res => {
-        // Here
+
+      }).catch(err => {
+        this.errorMessage = err
+        this.loading = false
       })
 
     if (this.firebaseService.isLogggedIn === true) {

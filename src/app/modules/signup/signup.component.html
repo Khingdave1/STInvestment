@@ -10,8 +10,12 @@
     placeholder="Confirm Password"
     formControlName="confirmPassword"
   />
+  <span class="rc">{{ errorMessage }}</span>
   <div class="form-btn">
-    <button class="btn prim-btn clickable" (click)="signup()">Send</button>
+    <button class="btn prim-btn clickable" (click)="signup()">
+      <span *ngIf="loading">Loading...</span>
+      <span *ngIf="!loading">Send</span>
+    </button>
     <span class="form-extra clickable" (click)="openSigninModal()"
       >Have an account? <strong>Login</strong></span
     >
