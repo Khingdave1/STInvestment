@@ -7,17 +7,17 @@ import { OverviewComponent } from './modules/dashboard/overview/overview.compone
 import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
-  { path: '', component: DefaultComponent, redirectTo: '', pathMatch: 'full' },
+  { path: '', component: DefaultComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: '', component: OverviewComponent },
-      { path: 'account', component: AccountComponent }
+      { path: '', component: OverviewComponent, canActivate: [AuthGuard] },
+      { path: 'account', component: AccountComponent, canActivate: [AuthGuard] }
     ]
   },
-  { path: '**', component: DefaultComponent },                       // catch-all in case no other path matched
+  // { path: '**', component: DefaultComponent },                       // catch-all in case no other path matched
 ];
 
 @NgModule({

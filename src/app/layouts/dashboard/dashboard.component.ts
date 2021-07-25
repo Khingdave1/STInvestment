@@ -29,7 +29,6 @@ export class DashboardComponent implements OnInit {
         let item = r.payload.doc.data() as Profile
         this.user = item
       });
-      console.log(this.user)
     })
 
     // Click Outside to close element

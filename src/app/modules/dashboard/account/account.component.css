@@ -38,9 +38,10 @@ input:hover {
 }
 .account-banner-info-image {
   max-width: 100px;
+  width: 196px;
+  height: auto;
   margin-top: -40px;
   margin-right: 20px;
-  cursor: pointer;
 }
 .account-banner-info-image .profile-image {
   width: 100%;

@@ -68,6 +68,7 @@ main .main-header #profile-name {
 main .main-header #profile-image {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
 }
 main .main-body {
   display: grid;

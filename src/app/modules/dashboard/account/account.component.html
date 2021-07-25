@@ -9,19 +9,15 @@
     </div>
     <div class="account-banner-info">
       <div class="account-banner-info-image" #accountBannerInfoImage>
-        <img
-          src="../../../../assets/img/profile.png"
-          alt="image"
-          class="profile-image"
-        />
+        <img [src]="user?.imageUrl" alt="image" class="profile-image" />
       </div>
       <div class="account-banner-info-details">
         <div class="profile-name">
-          <h4>Name</h4>
+          <h4>{{ user?.fullName }}</h4>
           <p>Software Developer</p>
         </div>
         <div class="profile-email">
-          <h4>Email</h4>
+          <h4>{{ user?.emailAddress }}</h4>
           <p>Email</p>
         </div>
       </div>
@@ -40,20 +36,25 @@
         <form action="">
           <div class="user-name">
             <label for="name">Username</label>
-            <input type="text" name="name" />
+            <input type="text" name="name" [(ngModel)]="user.userName" />
           </div>
           <div class="email">
             <label for="email">Email</label>
-            <input type="email" name="email" />
+            <input type="email" name="email" [(ngModel)]="user.emailAddress" />
           </div>
-          <div class="first-name">
-            <label for="firstname">First Name</label>
-            <input type="text" placeholder="David" id="firstname" class="" />
+          <div class="full-name">
+            <label for="fullname">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              [(ngModel)]="user.fullName"
+            />
           </div>
-          <div class="last-name">
+          <!-- <div class="last-name">
             <label for="lastname">Last Name</label>
             <input type="text" placeholder="Aremu" id="lastname" class="" />
-          </div>
+          </div> -->
         </form>
       </div>
 

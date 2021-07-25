@@ -8,7 +8,7 @@ import { ProfileService } from './profile.service';
 })
 export class FirebaseService {
   isLogggedIn = false
-  imageUrl = "https://res.cloudinary.com/djnqxvljr/image/upload/v1611737247/userIcon_lki4v7.png"
+  imageUrl = "https://res.cloudinary.com/djnqxvljr/image/upload/v1620660773/perlfood/assets/svg/bxs-user-circle_lpxmj4.svg"
 
   // currentUser: string;
   private currentUserSubject: BehaviorSubject<any>
