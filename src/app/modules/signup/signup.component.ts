@@ -62,7 +62,7 @@ export class SignupComponent implements OnInit {
       .then(res => {
 
       }).catch(err => {
-        this.errorMessage = err
+        this.errorMessage = err.message
         this.loading = false
       })
 
