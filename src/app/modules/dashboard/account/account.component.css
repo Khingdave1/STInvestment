@@ -123,7 +123,8 @@ input:hover {
     grid-column: 1 / span 3;
   }
 }
-.account-profile-details .update-btn {
+.account-profile-details .update-btn,
+.account-profile-details .update-btn .success-msg {
   display: flex;
   align-items: center;
   justify-content: space-between;
