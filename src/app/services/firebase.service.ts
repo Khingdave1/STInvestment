@@ -68,24 +68,6 @@ export class FirebaseService {
       })
   }
 
-  // Email Verification
-
-  // Reset Password
-  resetPassword(email: string): Promise<any> {
-    return this.firebaseAuth.sendPasswordResetEmail(email)
-      .then(() => {
-        console.log('Auth Service: reset password success');
-        // this.router.navigate(['/amount']);
-      })
-      .catch(error => {
-        console.log('Auth Service: reset password error...');
-        console.log(error.code);
-        console.log(error)
-        if (error.code)
-          return error;
-      });
-  }
-
   // Sign Out
   signout() {
     this.firebaseAuth.signOut()
