@@ -11,7 +11,7 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 export class SigninComponent implements OnInit {
 
   @Output("parentData") parentData: EventEmitter<any> = new EventEmitter();
-  // hide: boolean = true;
+  hide: boolean = true;
   loading: boolean = false;
   returnUrl = '';
   error = '';

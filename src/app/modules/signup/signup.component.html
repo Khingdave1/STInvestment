@@ -1,15 +1,40 @@
 <h5>Register with us</h5>
 <form (ngSubmit)="signup()" [formGroup]="signupForm">
-  <input type="text" placeholder="Full Name" formControlName="fullName" />
-  <input type="text" placeholder="Username" formControlName="userName" />
-  <input type="email" placeholder="Email" formControlName="email" />
-  <input type="tel" placeholder="Phone Number" formControlName="number" />
-  <input type="password" placeholder="Password" formControlName="password" />
-  <input
-    type="password"
-    placeholder="Confirm Password"
-    formControlName="confirmPassword"
-  />
+  <div class="input-fields">
+    <input type="text" placeholder="Full Name" formControlName="fullName" />
+  </div>
+  <div class="input-fields">
+    <input type="text" placeholder="Username" formControlName="userName" />
+  </div>
+  <div class="input-fields">
+    <input type="email" placeholder="Email" formControlName="email" />
+  </div>
+  <div class="input-fields">
+    <input type="tel" placeholder="Phone Number" formControlName="number" />
+  </div>
+  <div class="input-fields password-field">
+    <input
+      placeholder="Password"
+      formControlName="password"
+      [type]="hide ? 'password' : 'text'"
+    />
+    <img
+      [src]="
+        hide
+          ? '../../../assets/img/bx-show.svg'
+          : '../../assets/img/bx-hide.svg'
+      "
+      class="clickable"
+      (click)="hide = !hide"
+    />
+  </div>
+  <div class="input-fields">
+    <input
+      type="password"
+      placeholder="Confirm Password"
+      formControlName="confirmPassword"
+    />
+  </div>
   <span class="rc">{{ errorMessage }}</span>
   <div class="form-btn">
     <button class="btn prim-btn clickable" (click)="signup()">

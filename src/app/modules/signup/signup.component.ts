@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
   imageUrl: string = "";
   loading: boolean = false;
   errorMessage: string = "";
+  hide: boolean = true;
 
   constructor(private firebaseService: FirebaseService, private formBuilder: FormBuilder, private router: Router) { }
 

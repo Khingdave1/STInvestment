@@ -1,7 +1,24 @@
 <h5>Login</h5>
 <form (ngSubmit)="signin()" [formGroup]="signinForm">
-  <input type="email" placeholder="Email" formControlName="email" />
-  <input type="password" placeholder="Password" formControlName="password" />
+  <div class="input-fields">
+    <input type="email" placeholder="Email" formControlName="email" />
+  </div>
+  <div class="input-fields password-field">
+    <input
+      placeholder="Password"
+      formControlName="password"
+      [type]="hide ? 'password' : 'text'"
+    />
+    <img
+      [src]="
+        hide
+          ? '../../../assets/img/bx-show.svg'
+          : '../../assets/img/bx-hide.svg'
+      "
+      class="clickable"
+      (click)="hide = !hide"
+    />
+  </div>
   <span class="rc">{{ errorMessage }}</span>
   <div class="form-btn">
     <button class="btn prim-btn clickable" (click)="signin()">
