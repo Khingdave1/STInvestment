@@ -1,0 +1,32 @@
+/*/---- Main start ----/*/
+input:hover {
+    border: 1px solid var(--text-color) !important;
+  }
+  
+  .account-banner {
+    padding-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+  }
+  .account-banner-bg .cover-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../../../../assets/img/bg-2.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+    width: 100%;
+  }
+  .account-banner-bg .cover-image h2 {
+    font-size: 28px;
+    color: var(--white-color);
+    padding: 5rem 0 0 3rem;
+  }
+  .account-banner-info {
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  @media only screen and (min-width: 585px) {
+    .account-banner-info {
+      display: flex;
+      align-items: center;
+    }
+  }
