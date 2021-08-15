@@ -9,10 +9,12 @@ import { DashboardModule } from './layouts/dashboard/dashboard.module';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DefaultModule } from './layouts/default/default.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     DefaultComponent
+    
   ],
   imports: [
     BrowserModule,
