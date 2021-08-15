@@ -10,6 +10,7 @@ import { BtcchartComponent } from 'src/app/modules/btcchart/btcchart.component';
 import { FooterComponent } from 'src/app/modules/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderModule } from 'src/app/modules/header/header.module';
+import { OptionsComponent } from 'src/app/modules/options/options.component';
 
 
 
@@ -20,6 +21,7 @@ import { HeaderModule } from 'src/app/modules/header/header.module';
     ServicesComponent,
     TestimonialComponent,
     ContactComponent,
+    OptionsComponent,
     BtcchartComponent,
     FooterComponent
   ],
@@ -37,6 +39,7 @@ import { HeaderModule } from 'src/app/modules/header/header.module';
     ServicesComponent,
     TestimonialComponent,
     ContactComponent,
+    OptionsComponent,
     BtcchartComponent,
     FooterComponent
   ]
