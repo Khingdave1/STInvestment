@@ -6,6 +6,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { AccountComponent } from 'src/app/modules/dashboard/account/account.component';
+import { SendfundComponent } from 'src/app/modules/dashboard/sendfund/sendfund.component';
+import { ReceivefundComponent } from 'src/app/modules/dashboard/receivefund/receivefund.component';
 
 
 
@@ -13,8 +15,11 @@ import { AccountComponent } from 'src/app/modules/dashboard/account/account.comp
   declarations: [
     DashboardComponent,
     OverviewComponent,
-    AccountComponent
+    AccountComponent,
+    SendfundComponent,
+    ReceivefundComponent
   ],
+  
   imports: [
     CommonModule,
     RouterModule,

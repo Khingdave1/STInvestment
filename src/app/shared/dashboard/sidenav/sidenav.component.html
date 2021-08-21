@@ -14,7 +14,12 @@
     <li class="clickable" routerLink="account" routerLinkActive="active">
       Account
     </li>
-    <li class="clickable" routerLinkActive="active">Send/Receive</li>
+    <li class="clickable" routerLinkActive="active" routerLink="send">
+      Send
+    </li>
+    <li class="clickable" routerLinkActive="active" routerLink="receive">
+      Receive
+    </li>
   </ul>
 </nav>
 <span class="logout clickable" (click)="logOut()"

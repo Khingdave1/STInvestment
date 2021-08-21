@@ -20,13 +20,56 @@ input:hover {
     color: var(--white-color);
     padding: 5rem 0 0 3rem;
   }
+
   .account-banner-info {
-    padding: 1rem;
-    padding-bottom: 0.5rem;
+    display: block;
+    width: 60%;
+    margin: 2rem auto;
   }
+
+ 
   @media only screen and (min-width: 585px) {
     .account-banner-info {
       display: flex;
       align-items: center;
     }
   }
+
+  /* Table */
+.table {
+  width: 100%;
+  overflow-x: scroll;
+}
+@media only screen and (min-width: 885px) {
+  .table {
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  }
+  .table::-webkit-scrollbar {
+    display: none;
+  }
+}
+#transactions {
+  border-collapse: collapse;
+  width: 100%;
+}
+#transactions td,
+#transactions th {
+  padding: 8px;
+}
+#transactions tr:nth-child(even) {
+  background-color: var(--light-grey);
+}
+#transactions tr:hover {
+  background-color: var(--light-green);
+}
+#transactions th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 500;
+}
