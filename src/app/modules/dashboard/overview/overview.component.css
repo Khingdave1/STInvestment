@@ -138,6 +138,23 @@ main .main-header #profile-name {
 .card-list .card p span {
   margin-left: 1rem;
 }
+/* Balance Card */
+.bal-card .card i {
+  color: var(--primary-color);
+}
+.bal-card .card h4 {
+  font-weight: 500;
+}
+.bal-card .card h4 i {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  float: right;
+  font-size: 40px;
+}
+.bal-card .card p {
+  margin-top: 2rem;
+}
 
 /* Table */
 .table {
