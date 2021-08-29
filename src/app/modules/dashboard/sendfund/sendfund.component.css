@@ -1,41 +1,42 @@
 /*/---- Main start ----/*/
 input:hover {
-    border: 1px solid var(--text-color) !important;
-  }
-  
-  .account-banner {
-    padding-bottom: 1rem;
-    box-shadow: var(--box-shadow);
-  }
-  .account-banner-bg .cover-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(../../../../assets/img/bg-2.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 250px;
-    width: 100%;
-  }
-  .account-banner-bg .cover-image h2 {
-    font-size: 28px;
-    color: var(--white-color);
-    padding: 5rem 0 0 3rem;
-  }
+  border: 1px solid var(--text-color) !important;
+}
 
+.account-banner {
+  padding-bottom: 1rem;
+  /* box-shadow: var(--box-shadow); */
+}
+.account-banner-bg .cover-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../../assets/img/bg-2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  width: 100%;
+}
+.account-banner-bg .cover-image h2 {
+  font-size: 28px;
+  color: var(--white-color);
+  padding: 5rem 0 0 3rem;
+}
+
+.account-banner-info {
+  display: block;
+  width: 90%;
+  margin: 2rem auto;
+}
+@media only screen and (min-width: 585px) {
   .account-banner-info {
-    display: block;
-    width: 60%;
-    margin: 2rem auto;
+    display: flex;
+    align-items: center;
   }
+}
+.account-banner .btn {
+  padding: 0.5rem;
+}
 
- 
-  @media only screen and (min-width: 585px) {
-    .account-banner-info {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  /* Table */
+/* Table */
 .table {
   width: 100%;
   overflow-x: scroll;
@@ -72,4 +73,40 @@ input:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
   font-weight: 500;
+}
+
+/* Plan card */
+.plan-card {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 1200px) {
+  .plan-card {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
+@media only screen and (min-width: 480px) {
+  .plan-card {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+.plan-card h4,
+.plan-card ul {
+  text-align: center;
+}
+.plan-card-item {
+  border: 1px solid var(--light-grey);
+  padding: 1rem;
+}
+.plan-card ul {
+  margin: 1rem 0;
+}
+.plan-card ul li {
+  padding: 0.5rem;
+}
+.plan-card .btn {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
 }
