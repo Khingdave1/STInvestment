@@ -13,7 +13,7 @@
       <p>Contact our whatapp number via +2******** or send us a mail to customerservice@supertrade.com </p>
       </div>
     </div>
-    <button class="btn prim-btn register-btn">Make New Deposit</button>
+    <!-- <button class="btn prim-btn register-btn">Make New Deposit</button> -->
   </div>
     <!-- Table -->
 <!-- <div class="table">
@@ -79,7 +79,32 @@
         <li>Max: $10,000</li>
       </ul>
     </div>
-    <a href="#" class="btn sec-btn">Invest</a>
+    <a class="btn sec-btn" (click)="openDepositModal()" #investBtn>Invest</a>
+    <!-- Invest plan Modal -->
+    <div class="plan-invest-area" [class.show-modal]="depositModal">
+      <div class="plan-invest" #deposit>
+        <h3 class="plan-invest-head">Deposit fund from your account</h3>
+        <div class="plan-invest-body">
+          <h5 class="heading">Account Balance $0</h5>
+          <div class="body">
+            <img src="https://www.svgrepo.com/show/15468/send.svg" alt="send">
+            <div class="body-details">
+              <div class="user-details">
+                <p><span class="uc">Name:</span> Ajayi Olawale</p>
+                <p><span class="uc">Email:</span> ajayi@gmail.com</p>
+                <p><span class="uc">Option:</span> BTC</p>
+                <p><span class="uc">Refrence Id:</span> auto</p>
+                <p><span class="uc">Btc Id:</span> <span class="gen-code">Loremipsumdolorsitame</span> </p>
+              </div>
+              <div class="body-btns">
+                <button class="btn sec-btn">Copy</button>
+                <button class="btn prim-btn">Deposit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="plan-card-item">
     <h4 class="uc">premium investment plan</h4>
@@ -90,7 +115,8 @@
         <li>Max: $10,000</li>
       </ul>
     </div>
-    <a href="#" class="btn sec-btn">Invest</a>
+    <a class="btn sec-btn">Invest</a>
+
   </div>
   <div class="plan-card-item">
     <h4 class="uc">premium investment plan</h4>
@@ -101,7 +127,7 @@
         <li>Max: $10,000</li>
       </ul>
     </div>
-    <a href="#" class="btn sec-btn">Invest</a>
+    <a class="btn sec-btn">Invest</a>
   </div>
   <div class="plan-card-item">
     <h4 class="uc">premium investment plan</h4>
@@ -112,7 +138,7 @@
         <li>Max: $10,000</li>
       </ul>
     </div>
-    <a href="#" class="btn sec-btn">Invest</a>
+    <a class="btn sec-btn">Invest</a>
   </div>
 </div>
 </section>

@@ -1,39 +1,70 @@
 /*/---- Main start ----/*/
-input:hover {
-    border: 1px solid var(--text-color) !important;
-  }
-  
-  .account-banner {
-    padding-bottom: 1rem;
-    box-shadow: var(--box-shadow);
-  }
-  .account-banner-bg .cover-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(../../../../assets/img/bg-2.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 250px;
-    width: 100%;
-  }
-  .account-banner-bg .cover-image h2 {
-    font-size: 28px;
-    color: var(--white-color);
-    padding: 5rem 0 0 3rem;
-  }
+input:hover,
+select:hover {
+  border: 1px solid var(--text-color) !important;
+}
 
+.account-banner {
+  padding-bottom: 1rem;
+  /* box-shadow: var(--box-shadow); */
+}
+.account-banner-bg .cover-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../../assets/img/bg-2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  width: 100%;
+}
+.account-banner-bg .cover-image h2 {
+  font-size: 28px;
+  color: var(--white-color);
+  padding: 5rem 0 0 3rem;
+}
+
+.account-banner-info {
+  display: block;
+  width: 90%;
+  margin: 2rem auto;
+}
+@media only screen and (min-width: 585px) {
   .account-banner-info {
-    display: block;
-    width: 60%;
-    margin: 2rem auto;
-  }
-  .account-banner .btn .prim-btn .register-btn{
     display: flex;
     align-items: center;
   }
- 
-  @media only screen and (min-width: 585px) {
-    .account-banner-info {
-      display: flex;
-      align-items: center;
-    }
-  }
+}
+.account-banner .btn {
+  padding: 0.5rem;
+}
+
+/* Withdraw Section */
+.withdraw-sect {
+  display: grid;
+  grid-gap: 2rem;
+  border: 1px solid var(--light-grey);
+  padding: 1rem;
+}
+.withdraw-sect-head,
+.withdraw-sect-body-head {
+  text-align: center;
+}
+.withdraw-sect-body-form {
+  display: grid;
+  grid-gap: 1rem;
+}
+.withdraw-sect-body-form input,
+.withdraw-sect-body-form select {
+  width: 100%;
+  border: 1px solid var(--light-grey);
+  border-radius: var(--border-radius);
+  padding: 0.8rem;
+  transition: all 0.2s;
+  outline: none;
+  margin-top: 1rem;
+  transition: all 0.2s ease-in;
+}
+.withdraw-sect-body-form .btn {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
