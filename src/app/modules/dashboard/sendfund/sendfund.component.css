@@ -168,6 +168,8 @@ input:hover {
 .gen-code {
   background-color: var(--light-green);
   padding: 0.2rem;
+  font-size: 12px;
+  font-weight: bold;
 }
 .plan-invest-body .body img {
   width: 100px;
