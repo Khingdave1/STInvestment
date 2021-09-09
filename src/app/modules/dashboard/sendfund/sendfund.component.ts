@@ -17,6 +17,10 @@ export class SendfundComponent implements AfterViewInit {
   planPreview2: any;
   planPreview3: any;
   option: string = "Null";
+  optionId: string = "Null";
+  BtcId: string = "1FqD5tgXJjMaNhP1ECoYTkqvpnYK35jmzA";
+  EtherumId: string = "0x9286a3cd89b7a8a8703a1bcda027b0e3fd01a867";
+  usdtId: string = "0x9286a3cd89b7a8a8703a1bcda027b0e3fd01a867";
   amount: any;
   paymentMethod: any;
   userId: any;
@@ -56,8 +60,13 @@ export class SendfundComponent implements AfterViewInit {
 
     if (this.paymentMethod.value === 'Btc') {
       this.option = "Btc"
+      this.optionId = this.BtcId
     } else if (this.paymentMethod.value === 'Etherum') {
       this.option = "Etherum"
+      this.optionId = this.EtherumId
+    } else if (this.paymentMethod.value === 'Usdt') {
+      this.option = "Usdt"
+      this.optionId = this.usdtId
     }
 
   }
