@@ -6,14 +6,7 @@
         <h2>Hi, Welcome back!</h2>
       </div>
     </div>
-    <div class="account-banner-info">
-      <!-- <div class="account-message"> <p>Attention!!! You are to make payment to BTC wallet only. <strong>Example 1000 dollar desposit should be a transfer of 1000$ worth of BTC or any other Currency</strong>Payment processing on the side of the payment system may take some time. In case the account cant be deposited automatically, the request will be excuted within 2 working days after the company receives the notification from the cilent that he deposited his account.</p>
-      <p>For the purpose of anti-money laundering, account can't be deposited by any third party.</p>
-      <p>The Client should contact customerservice@supertrade.com</p>
-      <p>Contact our whatapp number via +2******** or send us a mail to customerservice@supertrade.com </p>
-      </div> -->
-    </div>
-    <!-- <button class="btn prim-btn register-btn">Make New Deposit</button> -->
+   
   </div>
 
   <div class="withdraw-sect">
@@ -35,14 +28,15 @@
           </select>
         </div>
         <div class="">
+          <label for="fullname">Wallet Address</label>
+          <input type="text" placeholder="Enter Wallet Address" />
+        </div>
+        <div class="">
           <label for="fullname">Password</label>
-          <input
-            type="password"
-            placeholder="Enter password"
-          />
+          <input type="password" placeholder="Enter password" />
         </div>
         <div>
-          <button class="btn prim-btn">Withdraw</button>
+          <button class="btn prim-btn" (click)= "withdrawlbtn">Withdraw</button>
         </div>
       </form>
     </div>

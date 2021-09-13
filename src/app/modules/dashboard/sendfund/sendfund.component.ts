@@ -10,6 +10,8 @@ import { ProfileService } from 'src/app/services/profile.service';
 export class SendfundComponent implements AfterViewInit {
 
   @ViewChild('investBtn') investBtn: ElementRef;
+  @ViewChild('investBtn2') investBtn2: ElementRef;
+  @ViewChild('investBtn3') investBtn3: ElementRef;
   @ViewChild('deposit') deposit: ElementRef;
 
   depositModal: any;
@@ -26,6 +28,8 @@ export class SendfundComponent implements AfterViewInit {
   userId: any;
   users: any;
   user: any;
+  copyText: any;
+  tooltip: any;
 
   constructor(private renderer: Renderer2, private profileService: ProfileService) { }
 
@@ -41,13 +45,15 @@ export class SendfundComponent implements AfterViewInit {
     })
 
     // Click Outside to close element
-    // this.renderer.listen('window', 'click', (e: Event) => {
-    //   let x = !this.investBtn.nativeElement.contains(e.target)
-    //   let y = !this.deposit.nativeElement.contains(e.target)
-    //   if (x && y) {
-    //     this.depositModal = false;
-    //   }
-    // });
+    this.renderer.listen('window', 'click', (e: Event) => {
+      let x = !this.investBtn.nativeElement.contains(e.target)
+      let x2 = !this.investBtn2.nativeElement.contains(e.target)
+      let x3 = !this.investBtn3.nativeElement.contains(e.target)
+      let y = !this.deposit.nativeElement.contains(e.target)
+      if (x && y && x2 && x3) {
+        this.depositModal = false;
+      }
+    });
   }
 
   // Submit form
@@ -80,6 +86,34 @@ export class SendfundComponent implements AfterViewInit {
   }
   openPlanPreview3() {
     this.planPreview3 = !this.planPreview3
+  }
+
+  // Copy text to clipboard
+  myFunction() {
+    /* Get the text field */
+    this.copyText = document.getElementById("myInput");
+
+    /* Select the text field */
+    this.copyText.select();
+    this.copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(this.copyText.value);
+
+    this.tooltip = document.getElementById("myTooltip");
+    this.tooltip.innerHTML = "Copied!";
+  }
+
+  // On mouse over
+  outFunc() {
+    this.tooltip = document.getElementById("myTooltip");
+    this.tooltip.innerHTML = "Copy to clipboard";
+  }
+
+  // Deposit
+  depositBtn() {
+    // Reload page
+    window.location.reload()
   }
 
 }

@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +19,7 @@ import { DefaultModule } from './layouts/default/default.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     DefaultModule,
     DashboardModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)

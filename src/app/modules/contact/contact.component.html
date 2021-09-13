@@ -3,12 +3,24 @@
   <div class="container">
     <div class="contact-form-area">
       <h5>Get in touch with us</h5>
-      <form action="">
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <textarea id="" cols="10" rows="5" placeholder="Message"></textarea>
+      <form (ngSubmit)="submit()" [formGroup]="contactForm">
+        <input type="text" placeholder="Name" formControlName="name" />
+        <input type="email" placeholder="Email" formControlName="email" />
+        <textarea
+          id=""
+          cols="10"
+          rows="5"
+          placeholder="Message"
+          formControlName="message"
+        ></textarea>
+        <!-- Email template -->
+        <input type="hidden" name="_template" value="box" />
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false" />
+        <!-- Email subject -->
+        <input type="hidden" name="_subject" value="New email whooo!" />
         <div class="form-btn">
-          <button class="btn sec-btn clickable">Send</button>
+          <button class="btn sec-btn clickable" (click)="submit()">Send</button>
         </div>
       </form>
     </div>

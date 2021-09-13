@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +8,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  loading: boolean = false;
+  successMessage: any;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
+  // Form initialization and validation
+  contactForm: FormGroup = this.formBuilder.group({
+    name: ['', { validators: [Validators.required], updateOn: "change" }],
+    email: ['', { validators: [Validators.required, Validators.email], updateOn: "change" }],
+    message: ['', { validators: [Validators.required], updateOn: "change" }]
+  })
+
+
+  // async
+  submit() {
+    // If form is invalid don't submit
+    if (this.contactForm.invalid) {
+      return
+    }
+
+    // Loading
+    this.loading = true
+
+    let payload = {
+      name: this.contactForm.value.name,
+      emailAddress: this.contactForm.value.email,
+      message: this.contactForm.value.message,
+    }
+
+    // Post email to dheyved1@gmail.com
+    this.http.post('https://formsubmit.co/dheyved1@gmail.com', payload).subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+    )
+  }
 }
