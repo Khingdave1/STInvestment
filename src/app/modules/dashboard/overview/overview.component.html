@@ -21,24 +21,29 @@
 
   <div class="card-list bal-card">
     <div class="card">
-      <h4 class="">Current Balance <i class='bx bxs-wallet-alt'></i></h4>
-      <p>$0</p>
+      <h4 class="">Current Balance <i class="bx bxs-wallet-alt"></i></h4>
+      <p>${{ user?.currentBal }}</p>
     </div>
     <div class="card">
-      <h4 class="">Total Deposit <i class='bx bxs-server'></i></h4>
-      <p>$0</p>
+      <h4 class="">Total Deposit <i class="bx bxs-server"></i></h4>
+      <p>${{ user?.totalDepo }}</p>
     </div>
     <div class="card">
-      <h4 class="">Total Withdrawal <i class='bx bx-money' ></i></h4>
-      <p>$0</p>
+      <h4 class="">Total Withdrawal <i class="bx bx-money"></i></h4>
+      <p>${{ user?.totalWith }}</p>
     </div>
   </div>
 
   <!-- Btc table -->
   <section class="btc-chart">
-    <iframe class="tradingview" scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/forex-cross-rates/?locale=en#%7B%22width%22%3A980%2C%22height%22%3A400%2C%22currencies%22%3A%5B%22EUR%22%2C%22USD%22%2C%22JPY%22%2C%22BTC%22%2C%22ETH%22%2C%22LTC%22%2C%22GBP%22%2C%22CHF%22%2C%22AUD%22%2C%22CAD%22%2C%22NZD%22%2C%22CNY%22%5D%2C%22isTransparent%22%3Afalse%2C%22colorTheme%22%3A%22light%22%2C%22utm_source%22%3A%22dynamicpremiumassets.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22forex-cross-rates%22%7D" ></iframe>
+    <iframe
+      class="tradingview"
+      scrolling="no"
+      allowtransparency="true"
+      frameborder="0"
+      src="https://s.tradingview.com/embed-widget/forex-cross-rates/?locale=en#%7B%22width%22%3A980%2C%22height%22%3A400%2C%22currencies%22%3A%5B%22EUR%22%2C%22USD%22%2C%22JPY%22%2C%22BTC%22%2C%22ETH%22%2C%22LTC%22%2C%22GBP%22%2C%22CHF%22%2C%22AUD%22%2C%22CAD%22%2C%22NZD%22%2C%22CNY%22%5D%2C%22isTransparent%22%3Afalse%2C%22colorTheme%22%3A%22light%22%2C%22utm_source%22%3A%22dynamicpremiumassets.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22forex-cross-rates%22%7D"
+    ></iframe>
   </section>
-
 
   <!-- Btc Chart -->
   <section class="btc-chart">
@@ -54,5 +59,4 @@
       ></iframe>
     </div>
   </section>
-
 </div>

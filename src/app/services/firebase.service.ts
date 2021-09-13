@@ -9,6 +9,9 @@ import { ProfileService } from './profile.service';
 export class FirebaseService {
   isLogggedIn = false
   imageUrl = "https://res.cloudinary.com/djnqxvljr/image/upload/v1620660773/perlfood/assets/svg/bxs-user-circle_lpxmj4.svg"
+  currentBal = 0
+  totalDepo = 0
+  totalWith = 0
 
   // currentUser: string;
   private currentUserSubject: BehaviorSubject<any>
@@ -48,7 +51,10 @@ export class FirebaseService {
           userName: payload.userName,
           telNumber: payload.telNumber,
           imageUrl: this.imageUrl,
-          uid: res.user?.uid
+          uid: res.user?.uid,
+          currentBal: this.currentBal,
+          totalDepo: this.totalDepo,
+          totalWith: this.totalWith
         }
 
         /** sends verification email **/

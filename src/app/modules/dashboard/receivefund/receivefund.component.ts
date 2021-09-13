@@ -12,4 +12,9 @@ export class ReceivefundComponent implements OnInit {
   ngOnInit(): void {
   }
 
+    // Deposit
+    withdrawlbtn() {
+      // Reload page
+      window.location.reload()
+    }
 }
