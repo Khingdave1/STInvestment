@@ -6,8 +6,8 @@ footer {
 }
 footer .container {
   display: grid;
-  grid-gap: 1rem;
-  text-align: center;
+  grid-gap: 1.5rem;
+  justify-items: center;
 }
 @media only screen and (min-width: 480px) {
   footer .container {
