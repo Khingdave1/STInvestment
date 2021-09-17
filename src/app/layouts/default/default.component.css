@@ -18,6 +18,13 @@
   height: 50px;
   vertical-align: middle;
 }
+@media only screen and (max-width: 870px) {
+  .chat-bot img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+}
 @keyframes chat-bot {
   0% {
     transform: translateY(-5px);
