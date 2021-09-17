@@ -4,9 +4,9 @@
   <nav>
     <div class="container">
       <!-- Logo -->
-      <a href="index.html" class="nav-logo">
-        Logo
-      </a>
+      <span routerLink="" class="nav-logo clickable">
+        <img src="../../../assets/img/logo.png" alt="" />
+      </span>
       <!-- Nav link -->
       <div class="nav-list-area">
         <ul class="nav-list" [class.open-menu]="hamClick">
@@ -43,7 +43,7 @@
       <p>
         SuperTrade Investment have become a real breakthrough in the development of finance and technology sector; They  represent a fundamentally new instrument of payment. In Addition to opportunities that digital money offers in the field of global payments, this is also a great opportunity to make money,available to everyone.
       </p>
-      <a href="#contact" class="btn prim-btn">Invest now</a>
+      <a routerLink="dashboard/send" class="btn prim-btn">Invest now</a>
     </div>
     <div class="hero-img">
       <img
