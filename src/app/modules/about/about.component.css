@@ -16,6 +16,10 @@
 .about-details p {
   color: var(--text-color2);
 }
+.about-details .btn {
+  margin-top: 1rem;
+  padding: 0.5rem 0.8rem;
+}
 .about-img {
   flex-basis: 50%;
 }
@@ -61,4 +65,3 @@
     width: 80%;
   }
 }
-
