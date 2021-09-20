@@ -35,7 +35,7 @@
   top: -100%;
   width: 100%;
   height: 100vh;
-  /* background-color: #f2f5f6a4; */
+  background-color: #f2f5f6a4;
   display: flex;
   z-index: 150;
   opacity: 0;
