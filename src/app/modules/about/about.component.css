@@ -23,3 +23,42 @@
   width: 100%;
 }
 /* About ends */
+
+/* Cert Area */
+.cert-area {
+  position: fixed;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100vh;
+  /* background-color: #f2f5f6a4; */
+  display: flex;
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease-in-out;
+  overflow-y: scroll;
+}
+.cert-area.show-modal {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+}
+.cert {
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 10vh auto;
+  width: 30%;
+  box-shadow: var(--box-shadow);
+}
+.cert img {
+  width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 870px) {
+  .cert {
+    width: 80%;
+  }
+}
+
