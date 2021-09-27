@@ -31,6 +31,14 @@
   border-bottom: 2px solid var(--light-grey);
   outline: none;
 }
+.contact-form-area form textarea {
+  resize: none;
+}
+.contact-form-area form .form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .contact-form-area form .form-btn .btn {
   font-size: 17px;
   padding: 0.5rem 1rem;
@@ -48,4 +56,3 @@
   }
 }
 /* Contact us ends */
-
