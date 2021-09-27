@@ -13,14 +13,12 @@
           placeholder="Message"
           formControlName="message"
         ></textarea>
-        <!-- Email template -->
-        <input type="hidden" name="_template" value="box" />
-        <!-- Disable Captcha -->
-        <input type="hidden" name="_captcha" value="false" />
-        <!-- Email subject -->
-        <input type="hidden" name="_subject" value="New email whooo!" />
         <div class="form-btn">
           <button class="btn sec-btn clickable" (click)="submit()">Send</button>
+
+          <!-- Message -->
+          <span class="status gc" *ngIf="success">Message Sent!</span>
+          <span class="status rc" *ngIf="failed">Oops! Failed</span>
         </div>
       </form>
     </div>
