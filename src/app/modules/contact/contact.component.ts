@@ -9,7 +9,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
   loading: boolean = false;
-  successMessage: any;
+  status: string = "";
+  success: boolean = false;
+  failed: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
 
@@ -28,6 +30,7 @@ export class ContactComponent implements OnInit {
   submit() {
     // If form is invalid don't submit
     if (this.contactForm.invalid) {
+      // this.failed = true
       return
     }
 
@@ -41,9 +44,18 @@ export class ContactComponent implements OnInit {
     }
 
     // Post email to dheyved1@gmail.com
-    this.http.post('https://formsubmit.co/dheyved1@gmail.com', payload).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
+    this.http.post('https://formspree.io/f/meqvnygp', payload).subscribe(
+      (response) => this.success = true,
+      (error) => this.failed = true
     )
+
+    // Set Timeout
+    setTimeout(() => {
+      this.success = false;
+      this.failed = false
+    }, 3000);
+
+    // Reset Form
+    this.contactForm.reset();
   }
 }
