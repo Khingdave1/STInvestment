@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
 import { ProfileService } from 'src/app/services/profile.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sendfund',
@@ -31,7 +32,7 @@ export class SendfundComponent implements AfterViewInit {
   copyText: any;
   tooltip: any;
 
-  constructor(private renderer: Renderer2, private profileService: ProfileService) { }
+  constructor(private renderer: Renderer2, private profileService: ProfileService, private router: Router) { }
 
   ngAfterViewInit(): void {
 
