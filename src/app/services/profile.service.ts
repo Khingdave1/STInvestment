@@ -34,7 +34,9 @@ export class ProfileService {
 
   // UPDATE
   updateUser(userId: string, payload: any) {
-    this.db.doc(this.collectionName + '/' + userId).update(payload)
+    return new Promise<any>((resolve, reject) => {
+      this.db.doc(this.collectionName + '/' + userId).update(payload).then(res => resolve(res), err => reject(err))
+    })
   }
 
   // DELETE
