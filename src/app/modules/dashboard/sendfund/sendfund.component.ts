@@ -112,8 +112,8 @@ export class SendfundComponent implements AfterViewInit {
 
   // Deposit
   depositBtn() {
-    // Reload page
-    window.location.reload()
+    // Navigate to Dashboard
+    this.router.navigate(['dashboard'])
   }
 
 }
