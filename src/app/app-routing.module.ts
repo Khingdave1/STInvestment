@@ -13,9 +13,8 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [AuthGuard],
     children: [
-      {path: '', component: OverviewComponent, canActivate: [AuthGuard] },
+      {path: '', component: OverviewComponent },
       {path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
       {path: 'send', component: SendfundComponent, canActivate:[AuthGuard]},
       {path: 'receive', component: ReceivefundComponent, canActivate:[AuthGuard]}
