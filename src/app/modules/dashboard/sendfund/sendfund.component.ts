@@ -93,23 +93,25 @@ export class SendfundComponent implements AfterViewInit {
   // Copy text to clipboard
   myFunction() {
     /* Get the text field */
-    this.copyText = document.getElementById("myInput");
+    this.copyText = document.getElementsByClassName("myInput");
 
-    /* Select the text field */
-    this.copyText.select();
-    this.copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    Array.prototype.forEach.call(this.copyText, i => {
+      /* Select the text field */
+      i.select();
+      // console.log(i.value)
+      i.setSelectionRange(0, 99999); /* For mobile devices */
 
-    /* Copy the text inside the text field */
-    navigator.clipboard.writeText(this.copyText.value);
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(i.value);
 
-    this.tooltip = document.getElementById("myTooltip");
-    this.tooltip.innerHTML = "Copied!";
+      this.tooltip = "Copied!";
+
+    });
   }
 
   // On mouse over
   outFunc() {
-    this.tooltip = document.getElementById("myTooltip");
-    this.tooltip.innerHTML = "Copy to clipboard";
+    this.tooltip = "Copy to clipboard";
   }
 
   // Deposit
