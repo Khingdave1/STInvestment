@@ -59,11 +59,12 @@ export class SendfundComponent implements AfterViewInit {
 
   // Submit form
   openDepositModal() {
+    
+     // Open Deposit Modal
+    this.depositModal = !this.depositModal
+    
     this.amount = document.getElementById("amount");
     this.paymentMethod = document.getElementById("paymentMethod");
-
-    // Open Deposit Modal
-    this.depositModal = !this.depositModal
 
     if (this.paymentMethod.value === 'Btc') {
       this.option = "Btc"
