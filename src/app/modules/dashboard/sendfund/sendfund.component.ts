@@ -55,8 +55,6 @@ export class SendfundComponent implements AfterViewInit {
         this.depositModal = false;
       }
     });
-    
-    this.openDepositModal()
   }
 
   // Submit form
