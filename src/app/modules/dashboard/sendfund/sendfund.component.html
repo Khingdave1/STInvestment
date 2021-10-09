@@ -145,8 +145,8 @@
                 <input
                   type="text"
                   [value]="optionId"
-                  id="myInput"
-                  class="gen-code"
+                  class="gen-code myInput"
+                  disabled
                 />
               </p>
             </div>
@@ -157,8 +157,8 @@
                 class="btn sec-btn tooltip"
               >
                 <span class="tooltiptext" id="myTooltip"
-                  >Copy to clipboard</span
-                >
+                  >{{ tooltip }}
+                </span>
                 Copy
               </button>
               <button class="btn prim-btn" (click)="depositBtn()">
