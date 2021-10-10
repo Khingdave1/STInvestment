@@ -63,19 +63,21 @@ export class SendfundComponent implements AfterViewInit {
      // Open Deposit Modal
     this.depositModal = !this.depositModal
     
-    this.amount = document.getElementById("amount");
-    this.paymentMethod = document.getElementById("paymentMethod");
+    this.paymentMethod = document.getElementsByClassName("paymentMethod");
 
-    if (this.paymentMethod.value === 'Btc') {
-      this.option = "Btc"
-      this.optionId = this.BtcId
-    } else if (this.paymentMethod.value === 'Etherum') {
-      this.option = "Etherum"
-      this.optionId = this.EtherumId
-    } else if (this.paymentMethod.value === 'Usdt') {
-      this.option = "Usdt"
-      this.optionId = this.usdtId
-    }
+    Array.prototype.forEach.call(this.paymentMethod, i => {
+      // this.planPreview = !this.planPreview
+      if (i.value === 'Btc') {
+        this.option = "Btc"
+        this.optionId = this.BtcId
+      } else if (i.value === 'Etherum') {
+        this.option = "Etherum"
+        this.optionId = this.EtherumId
+      } else if (i.value === 'Usdt') {
+        this.option = "Usdt"
+        this.optionId = this.usdtId
+      }
+    });
 
   }
 
@@ -92,17 +94,15 @@ export class SendfundComponent implements AfterViewInit {
 
   // Copy text to clipboard
   myFunction() {
-    /* Get the text field */
-    this.copyText = document.getElementsByClassName("myInput");
+   /* Get the text field */
+    this.copyText = document.getElementById("myInput");
 
-    Array.prototype.forEach.call(this.copyText, i => {
-      /* Select the text field */
-      i.select();
-      // console.log(i.value)
-      i.setSelectionRange(0, 99999); /* For mobile devices */
+    /* Select the text field */
+    this.copyText.select();
+    this.copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
-      /* Copy the text inside the text field */
-      navigator.clipboard.writeText(i.value);
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(this.copyText.value);
 
       this.tooltip = "Copied!";
 
