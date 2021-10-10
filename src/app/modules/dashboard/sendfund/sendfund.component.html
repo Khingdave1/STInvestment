@@ -8,11 +8,10 @@
     </div>
   </div>
 
-
   <div class="plan-card">
     <div class="plan-card-item">
       <div class="plan-card-side plan-card-front" [class.show]="planPreview">
-		<h4 class="uc">Starter investment plan</h4>
+        <h4 class="uc">Starter investment plan</h4>
         <div>
           <ul>
             <li>Min. Possible Deposit $Not Available</li>
@@ -50,7 +49,7 @@
     </div>
     <div class="plan-card-item">
       <div class="plan-card-side plan-card-front" [class.show]="planPreview2">
-		<h4 class="uc">Premium investment plan</h4>
+        <h4 class="uc">Premium investment plan</h4>
         <div>
           <ul>
             <li>Min. Possible Deposit: $6000</li>
@@ -157,9 +156,7 @@
                 (mouseenter)="outFunc()"
                 class="btn sec-btn tooltip"
               >
-                <span class="tooltiptext" id="myTooltip"
-                  >{{ tooltip }}
-                </span>
+                <span class="tooltiptext" id="myTooltip">{{ tooltip }} </span>
                 Copy
               </button>
               <button class="btn prim-btn" (click)="depositBtn()">
