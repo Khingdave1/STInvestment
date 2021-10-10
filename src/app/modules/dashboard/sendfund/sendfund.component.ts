@@ -59,10 +59,11 @@ export class SendfundComponent implements AfterViewInit {
 
   // Submit form
   openDepositModal() {
-    
-     // Open Deposit Modal
+
+    // Open Deposit Modal
     this.depositModal = !this.depositModal
-    
+
+    this.amount = document.getElementById("amount");
     this.paymentMethod = document.getElementsByClassName("paymentMethod");
 
     Array.prototype.forEach.call(this.paymentMethod, i => {
@@ -94,7 +95,7 @@ export class SendfundComponent implements AfterViewInit {
 
   // Copy text to clipboard
   myFunction() {
-   /* Get the text field */
+    /* Get the text field */
     this.copyText = document.getElementById("myInput");
 
     /* Select the text field */
@@ -104,14 +105,14 @@ export class SendfundComponent implements AfterViewInit {
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(this.copyText.value);
 
-      this.tooltip = "Copied!";
-
-    });
+    this.tooltip = document.getElementById("myTooltip");
+    this.tooltip.innerHTML = "Copied!";
   }
 
   // On mouse over
   outFunc() {
-    this.tooltip = "Copy to clipboard";
+    this.tooltip = document.getElementById("myTooltip");
+    this.tooltip.innerHTML = "Copy to clipboard";
   }
 
   // Deposit
@@ -121,4 +122,3 @@ export class SendfundComponent implements AfterViewInit {
   }
 
 }
-
