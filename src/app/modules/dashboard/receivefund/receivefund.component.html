@@ -10,7 +10,9 @@
   <div class="withdraw-sect">
     <h3 class="withdraw-sect-head">Withdraw fund from your account</h3>
     <div class="withdraw-sect-body">
-      <h5 class="withdraw-sect-body-head">Account Balance $0</h5>
+      <h5 class="withdraw-sect-body-head">
+        Account Balance ${{ user?.totalDepo - user?.totalWith }}
+      </h5>
       <form
         class="withdraw-sect-body-form"
         (ngSubmit)="onEdit($event)"

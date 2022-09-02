@@ -12,6 +12,7 @@ export class OverviewComponent implements AfterViewInit {
   userId: any;
   users: any;
   user: any;
+  currentBal: number = 0
 
   constructor(private profileService: ProfileService) { }
 
@@ -23,8 +24,13 @@ export class OverviewComponent implements AfterViewInit {
       res.forEach((r: any) => {
         let item = r.payload.doc.data() as Profile
         this.user = item
+
+        // Calculate current balance
+        this.currentBal = this.user.totalDepo - this.user.totalWith
       });
     })
+
+
   }
 
 }

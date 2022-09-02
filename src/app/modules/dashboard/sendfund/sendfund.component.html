@@ -25,7 +25,9 @@
       <div class="plan-card-side plan-card-preview" [class.show]="planPreview">
         <h4 class="uc">Investment Preview</h4>
         <div class="plan-card-preview-body">
-          <h5 class="plan-card-preview-body-head">Account Balance $0</h5>
+          <h5 class="plan-card-preview-body-head">
+            Account Balance ${{ user?.totalDepo - user?.totalWith }}
+          </h5>
           <form class="plan-card-preview-body-form">
             <input type="text" placeholder="Enter amount" id="amount" />
             <select name="" class="paymentMethod">
@@ -63,7 +65,9 @@
       <div class="plan-card-side plan-card-preview" [class.show]="planPreview2">
         <h4 class="uc">Investment Preview</h4>
         <div class="plan-card-preview-body">
-          <h5 class="plan-card-preview-body-head">Account Balance $0</h5>
+          <h5 class="plan-card-preview-body-head">
+            Account Balance ${{ user?.totalDepo - user?.totalWith }}
+          </h5>
           <form class="plan-card-preview-body-form">
             <input type="text" placeholder="Enter amount" id="amount" />
             <select name="" class="paymentMethod">
@@ -101,7 +105,9 @@
       <div class="plan-card-side plan-card-preview" [class.show]="planPreview3">
         <h4 class="uc">Investment Preview</h4>
         <div class="plan-card-preview-body">
-          <h5 class="plan-card-preview-body-head">Account Balance $0</h5>
+          <h5 class="plan-card-preview-body-head">
+            Account Balance ${{ user?.totalDepo - user?.totalWith }}
+          </h5>
           <form class="plan-card-preview-body-form">
             <input type="text" placeholder="Enter amount" id="amount" />
             <select name="" class="paymentMethod">
