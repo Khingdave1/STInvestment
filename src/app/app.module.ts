@@ -9,12 +9,16 @@ import { AppComponent } from './app.component';
 import { DashboardModule } from './layouts/dashboard/dashboard.module';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DefaultModule } from './layouts/default/default.module';
+import { ForgotPasswordComponent } from './modules/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './modules/verify-email/verify-email.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DefaultComponent
+    DefaultComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,

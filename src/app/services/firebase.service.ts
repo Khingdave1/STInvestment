@@ -74,6 +74,13 @@ export class FirebaseService {
       })
   }
 
+  async resetPassword(email: string) {
+
+    await this.firebaseAuth.sendPasswordResetEmail(email)
+  }
+
+
+
   // Sign Out
   signout() {
     this.firebaseAuth.signOut()
