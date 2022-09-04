@@ -19,6 +19,9 @@
       (click)="hide = !hide"
     />
   </div>
+  <span class="form-extra clickable" (click)="forgotPassword()"
+    ><strong>Forgot passwoword</strong></span
+  >
   <span class="rc">{{ errorMessage }}</span>
   <div class="form-btn">
     <button class="btn prim-btn clickable" (click)="signin()">

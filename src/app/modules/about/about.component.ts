@@ -16,13 +16,13 @@ export class AboutComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // Click Outside to close element
-    this.renderer.listen('window', 'click', (e: Event) => {
-      let x = !this.certBtn.nativeElement.contains(e.target)
-      let y = !this.cert.nativeElement.contains(e.target)
-      if (x && y) {
-        this.certModal = false;
-      }
-    });
+    // this.renderer.listen('window', 'click', (e: Event) => {
+    //   let x = !this.certBtn.nativeElement.contains(e.target)
+    //   let y = !this.cert.nativeElement.contains(e.target)
+    //   if (x && y) {
+    //     this.certModal = false;
+    //   }
+    // });
   }
 
   // Open Cert Modal

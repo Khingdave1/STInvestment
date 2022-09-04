@@ -51,6 +51,8 @@ export class SigninComponent implements OnInit {
 
     await this.firebaseService.signinUser(payload)
       .then(res => {
+        console.log(res);
+
 
       }).catch(err => {
         this.errorMessage = err.message
@@ -62,6 +64,12 @@ export class SigninComponent implements OnInit {
       // Navigate to Dashboard
       this.router.navigate(['dashboard'])
     }
+  }
+
+  // Forgot password
+  forgotPassword() {
+    this.router.navigate(['forgot-password'])
+
   }
 
   // Show Signup Form

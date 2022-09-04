@@ -26,7 +26,7 @@ export class OverviewComponent implements AfterViewInit {
         this.user = item
 
         // Calculate current balance
-        this.currentBal = this.user.totalDepo - this.user.totalWith
+        // this.currentBal = this.user.totalDepo - this.user.totalWith
       });
     })
 
