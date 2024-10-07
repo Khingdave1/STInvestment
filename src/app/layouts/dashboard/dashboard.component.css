@@ -15,7 +15,8 @@
 .sidenav {
   height: 100%;
   padding: 1.5rem;
-  background-color: var(--light-green);
+  background-color: #2f4f4f;
+  color: var(--white-color);
   position: relative;
 }
 /* Media Queries */
