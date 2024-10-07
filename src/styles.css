@@ -3,7 +3,7 @@
 
 /* Variables starts */
 :root {
-  --primary-color: #009ef7;
+  --primary-color: #009ef7; /* old color - #2c724f */
   --text-color: #212121;
   --text-color2: #666666;
   --light-green: #f2f5f6;
