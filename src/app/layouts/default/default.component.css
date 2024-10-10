@@ -7,7 +7,7 @@
   background-color: #075e54;
   border-radius: 50%;
   padding: 8px;
-  animation: chat-bot 0.5s ease-in-out infinite;
+/*   animation: chat-bot 0.5s ease-in-out infinite; */
   z-index: 100;
 }
 .chat-bot:hover {
