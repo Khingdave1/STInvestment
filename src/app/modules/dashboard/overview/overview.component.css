@@ -94,6 +94,14 @@ main .main-header #profile-name {
   padding: 1.5rem;
   box-shadow: var(--box-shadow);
 }
+.main-body .card.grey {
+  background: #7C8DB5;
+  color: var(--white-color);
+}
+.main-body .card.navy-blue {
+  background: #1E1E2D;
+  color: var(--white-color);
+}
 /* Main ends */
 
 /* Media Queries */
