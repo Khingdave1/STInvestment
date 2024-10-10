@@ -51,6 +51,7 @@ main .main-header {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem;
+  border-bottom: 1px solid #ebebe;
 }
 main .main-header .main-header-menu {
   visibility: hidden;
