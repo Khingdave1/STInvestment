@@ -21,9 +21,9 @@ export class SendfundComponent implements AfterViewInit {
   planPreview3: any;
   option: string = "Null";
   optionId: string = "Null";
-  BtcId: string = "3LbttAGUx5LRPmny3LnBYgL2eLjgEPg1SL";
-  EtherumId: string = "0x3A117B8983c66234145d3cB- B1c0Bc08e960A1d8e";
-  usdtId: string = "TTCfCzCi216dtsooN13LZwi9e5SZ6VuR7G";
+  BtcId: string = "TLHnqiY76WHwb4U5EWwoQYhRKPVMqQmKS7";
+  EtherumId: string = "0x39B439Acc0b1eEDC51F4412aEc84bD8EC4A53854";
+  usdtId: string = "bc1qas59m8yzlkn3xjtn4vpt0d6wx0xe6fc84h5zq2";
   amount: any;
   paymentMethod: any;
   userId: any;
